@@ -1,9 +1,3 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,6 +17,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script type="text/javascript">
 			jQuery(document).ready(function($)
 			{
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				$("#homeBtn").UItoTop({
+					easingType: 'linear',
+					scrollSpeed: 1000
+				});
 				$("#homeHeader").stick_in_parent({
 					parent: "body"
 				});
@@ -46,14 +45,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="header-banner">
 		<div class="container">
 			<div class="home" id="homeHeader">
-					<a href="#to-top"><span class="glyphicon glyphicon-home"></span></a>
+					<a href="#" id=homeBtn><span class="glyphicon glyphicon-home"></span></a>
 			</div>
 			<div class="header-top">
 				<span class="menu"><img src="images/nav.png" alt=""/></span>
 					<div class="top-menu">
 						<ul>
 						<nav class="cl-effect-13">
-							<li><a class="scroll" href="#service">Servicios</a></li>
+							<li><a class="scroll" href="#services">Servicios</a></li>
 							<li><a class="scroll" href="#company">Quienes Somos</a></li>
 							<li><a class="scroll" href="#customers">Nuestros Clientes</a></li>
 							<li><a class="scroll" href="#contact">Contacto</a></li>
@@ -64,24 +63,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 			<div class="clearfix"></div>
 			<div class="banner-info text-center">
-				<a href="www.solucionesclean.cl"><img src="images/logos/logo_transparente_small.png" class="img-responsive"></a>
+				<a href="www.solucionesclean.cl"><img src="images/logos/logo_transparente_small.png" class="img-responsive" id="logo"></a>
 			</div>
+			<span id="services"></span>
 			<div class="header-bottom-grids text-center">
 				<div class="header-bottom-grid1">
 					<span class="glyphicon glyphicon-leaf"></span>
-					<h4>Claritas est etiam</h4>
 				</div>
 				<div class="header-bottom-grid2">
 					<span class="glyphicon glyphicon-certificate"></span>
-					<h4>Claritas est etiam</h4>
 				</div>
 				<div class="header-bottom-grid3">
 					<span class="glyphicon glyphicon-tree-deciduous"></span>
-					<h4>Claritas est etiam</h4>
 				</div>
 				<div class="header-bottom-grid4">
-					<span class="glyphicon glyphicon-screenshot"></span>
-					<h4>Claritas est etiam</h4>
+					<span class="glyphicon glyphicon-tint"></span>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -93,32 +89,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="container">
 			<div class="services-top-grids text-center">
 				<div class="secvice-top-grid-1">
-					<h3>Mirum est notare</h3>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-					<div class="icon1">
+					<h3>Control de Roedores</h3>
+					<p>El control de roedores es el conjunto de medidas preventivas, dirigidas a la destrucción sistemática de esta plaga, implementadas con miras a impedir la propagación de estos animales y de enfermedades de las que las ratas son comúnmente los agentes de transmisión, ya sea directamente, o indirectamente por intermedio de sus parásitos.</p>
+					<!-- <div class="icon1">
 						<i class="icon1"></i>
-					</div>
+					</div> -->
 				</div>
 				<div class="secvice-top-grid-2">
-					<h3>Mirum est notare</h3>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-					<div class="icon1">
-						<i class="icon2"></i>
-					</div>
+					<h3>Control de Insectos</h3>
+					<p>La desinsectación es el conjunto de medidas dirigidas al control y eliminación de insectos y otros artrópodos que pueden ser vectores de transmisión de enfermedades para el hombre.</p>
 				</div>
 				<div class="secvice-top-grid-3">
-					<h3>Mirum est notare</h3>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-					<div class="icon1">
-						<i class="icon3"></i>
-					</div>
+					<h3>Desratización Previo a una Demolición</h3>
+					<p>Previo a un procedimiento de demolición la Seremi de Salud exige de acuerdo al Decreto 157 / 05 - Articulo 103 el control de roedores, nuestra empresa está acreditada para emitir el certificado correspondiente para ser visado por la autoridad sanitaria, este certificado es requerido por las municipalidades para conceder cualquier permiso de demolición. </p>
 				</div>
 				<div class="secvice-top-grid-4">
-					<h3>Mirum est notare</h3>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-					<div class="icon1">
-						<i class="icon4"></i>
-					</div>
+					<h3>Sanitización de Estanques de Agua</h3>
+					<p>Este servicio garantiza la sanitizacion del estanque para agua potable sin elementos extraños como polvo, vectores, óxidos, pinturas, etc. De tal forma de garantizar la salubridad del agua.</p>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -127,8 +114,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<img src="images/s1.jpg" alt="" />
 				</div>
 				<div class="col-md-6 services-bottom-middle text-center">
-					<h3>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum  </h3>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+					<h3>Asesorías en Higiene Ambiental</h3>
+					<p> Tambien como empresa ofrecemos asesorías en Higiene Ambiental ...</p>
 				</div>
 				<div class="col-md-3 services-bottom-right">
 					<img src="images/s2.jpg" alt="" />
@@ -137,8 +124,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 		</div>
 	</div>
-	<div class="items">
+	<div class="items" id="company">
 		<div class="container">
+			<h1>Quienes Somos</h1>
+			<p>
+				CLEAN SOLUCIONES AMBIENTALES, es una empresa cuyo objetivo principal es entregar un servicio de calidad a nuestros clientes, enfocandonos en tratamientos a: Oficinas, bodegas,
+				servicios higienicos, casinos, colegios, centros de salud, etc. cumpliendo con todas las normativas asegurando servicios de calidad e inocuidad a nuestros clientes.
+				Nuestro Representante técnico es Médico Veterinario de profesión y Magister en Salud Pública, cuenta con más de 13 años de experiencia en el manejo integral de plagas
+				urbanas y participa en cada uno de los servicios prestados en terreno para asegurar el correcto trabajo, procurando cuidar al máximo el prestigio de nuestros clientes.
+				En relación a los productos utilizados en los distintos servicios, estos están autorizados y certificados por el ISP y la Autoridad Sanitaria correspondiente,
+				 asegurando de esta manera una total protección de la Salud de las personas y del Medio Ambiente.
+			</p>
 			<div class="col-md-4 item-1">
 				<img src="images/i1.jpg" alt="" />
 				<h3>Duis autem vel eum</h3>
@@ -154,101 +150,48 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="clearfix"></div>
 		</div>
 	</div>
+	<div class="customers">
+		<div class="container">
+			<div class="col-md-4">
+				<img src="images/i1.jpg" alt="" />
+			</div>
+			<div class="col-md-4">
+				<img src="images/i2.jpg" alt="" />
+			</div>
+			<div class="col-md-4">
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
 			<!-- testimonials -->
 	<div class="testimonials">
 		<div class="container">
-			<div class="testimonial-info">
-				<h3>Testimonials</h3>
-				<h5>Cras porttitor imperdiet volutpat nulla malesuada lectus eros <span>ut convallis felis consectetur ut </span></h5>
-			</div>
-			<div class="testimonial-grids">
-				<div class="testimonial-grid">
-					<p><span>"</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum iaculis diam quis sodales. Vestibulum eu dui tellus. In viverra porttitor auctor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas<span> "</span></p>
+				<div class="banner-info text-center" style="margin:0;">
+					<h2><a href="index.html">"Nuestros productos tienen todas las certificaciones necesarias para asegurar la protección integra de la salud de las personas."</a></h2>
+					<p id="nameGrt">Juan Carlos Salinas - Gerente General.</p>
 				</div>
 			</div>
-		</div>
 	</div>
 	<!-- //testimonials -->
-	<!-- news -->
-	<div class="news" id="news">
-		<div class="container">
-			<div class="news-text">
-				<h3>News</h3>
-				<h5>Cras porttitor imperdiet volutpat nulla malesuada lectus eros <span>ut convallis felis consectetur ut </span></h5>
-			</div>
-			<div class="news-grids">
-				<div class="col-md-3 news-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					<a href="single.html">Integer vitae ligula sed lectus</a>
-					<span>8.00 - 10.00 | JUN 09,2014</span>
-					<a class="mask" href="single.html"><img src="images/img1.jpg" class="img-responsive zoom-img" alt="" /></a>
-					<div class="news-info">
-						<p>Pellentesque ut urna eu mauris scele risque auctor volutpat et massa pers piciis iste natus scele risque auctor volutpat et massa.</p>
-						<a class="button" href="single.html"><img src="images/read.png" alt=""></a>
-					</div>
-				</div>
-				<div class="col-md-3 news-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					<a href="single.html">Integer vitae ligula sed lectus</a>
-					<span>10.00 - 12.00 | SEP 24,2014</span>
-					<a class="mask" href="single.html"><img src="images/img2.jpg" class="img-responsive zoom-img" alt="" /></a>
-					<div class="news-info">
-						<p>Pellentesque ut urna eu mauris scele risque auctor volutpat et massa pers piciis iste natus scele risque auctor volutpat et massa.</p>
-						<a class="button" href="single.html"><img src="images/read.png" alt=""></a>
-					</div>
-				</div>
-				<div class="col-md-3 news-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					<a href="single.html">Integer vitae ligula sed lectus</a>
-					<span>9.00 - 10.00 | FEB 15,2014</span>
-					<a class="mask" href="single.html"><img src="images/img3.jpg" class="img-responsive zoom-img" alt="" /></a>
-					<div class="news-info">
-						<p>Pellentesque ut urna eu mauris scele risque auctor volutpat et massa pers piciis iste natus scele risque auctor volutpat et massa.</p>
-						<a class="button" href="single.html"><img src="images/read.png" alt=""></a>
-					</div>
-				</div>
-				<div class="col-md-3 news-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					<a href="single.html">Integer vitae ligula sed lectus</a>
-					<span>11.00 - 10.00 | JUN 10,2014</span>
-					<a class="mask" href="single.html"><img src="images/img4.jpg" class="img-responsive zoom-img" alt="" /></a>
-					<div class="news-info">
-						<p>Pellentesque ut urna eu mauris scele risque auctor volutpat et massa pers piciis iste natus scele risque auctor volutpat et massa.</p>
-						<a class="button" href="single.html"><img src="images/read.png" alt=""></a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-	<!-- //news -->
 	<!-- content-section-ends -->
-	<div class="get-in-touch">
+	<div class="get-in-touch" id="contact">
 			<div class="container">
-				<div class="col-md-3 gin">
-					<h3>Get in Touch</h3>
-					<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspeisse eget diam</p>
-					<div class="social-icons footer-icons">
-						<i class="facebook"></i>
-						<i class="twitter"></i>
-						<i class="googlepluse"></i>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="col-md-3 address">
-					<h3>Address</h3>
+				<div class="col-md-6 address">
+					<h3>Dirección</h3>
 					<address>
-						<p>10-765 mg-Road,
-						<p>Washington, DC, United States,</p>
-						<p>ud-19832-6578.</p>
-						<p class="phone"><span>Phone</span> :+1 900 876 1234</p>
-						<span class="phone">E-mail : <a href="mail-to:example@mail.com">example@mail.com</a></span>
+						<p><strong>Baquedano #204</strong>, Lampa <br> ​Santiago - Chile</p>
+						<p class="phone"><span>Teléfono</span> : <a href="tel:+56996249425"></a>+569-96249425</p>
+						<span class="phone"><p>Mail : <a href="mail-to:gerencia@solucionesclean.cl">gerencia@solucionesclean.cl</p></a></span>
 					</address>
 				</div>
 				<div class="col-md-6 dal">
-					<h3>Drop us a line</h3>
-					<input type="text" class="text" value="First Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'First Name';}">
-					<input type="text" class="text" value="Last Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Last Name';}">
-					<input type="text" class="text" value="E-mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail';}">
-					<input type="text" class="text" value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}">
-					<textarea onfocus="if(this.value == 'Your Message') this.value='';" onblur="if(this.value == '') this.value='Your Message';" >Your Message</textarea>
-					<input type="submit" value="SEND">
+					<h3>Contáctanos</h3>
+					<input type="text" class="text" value="Nombre" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nombre';}">
+					<input type="text" class="text" value="Apellido" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Apellido';}">
+					<input type="text" class="text" value="Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mail';}">
+					<input type="text" class="text" value="Teléfono" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Teléfono';}">
+					<textarea onfocus="if(this.value == 'Tu Mensaje') this.value='';" onblur="if(this.value == '') this.value='Tu Mensaje';" >Tu Mensaje</textarea>
+					<input type="submit" value="ENVIAR">
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -257,24 +200,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="footer">
 		<div class="container">
 			<div class="copyright text-center">
-				<p>&copy; 2015 Gardening. All rights reserved | Design by  <a href="http://w3layouts.com">  W3layouts</a></p>
+				<p>&copy;Soluciones Clean 2015. Todos los derechos resservados. <span class="phone"><p><a href="mail-to:carlos.ramart@gmail.com"> Carlos Ramart - Webmaster</p></a></span></a></p>
 			</div>
 		</div>
 	</div>
 	<!-- footer-section -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-				/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear'
-				};
-				*/
-		$().UItoTop({ easingType: 'easeOutQuart' });
-});
-</script>
 <a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!---->
 
