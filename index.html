@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Soluciones Clean </title>
+<title>Soluciones Clean</title>
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<meta name="theme-color" content="#ffffff">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -11,41 +13,15 @@
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Niconne' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
 <script src="js/jquery.sticky-kit.min.js"></script>
-<script type="text/javascript">
-			jQuery(document).ready(function($)
-			{
-				$().UItoTop({ easingType: 'easeOutQuart' });
-				$("#homeBtn").UItoTop({
-					easingType: 'linear',
-					scrollSpeed: 1000
-				});
-				$("#homeHeader").stick_in_parent({
-					parent: "body"
-				});
-				$(".header-top").stick_in_parent({
-					parent : "body"
-				});
-				$(".scroll").click(function(event){
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
-				});
-				$( "span.menu" ).click(function()
-				{
-					$( ".top-menu ul" ).slideToggle( 300, function()
-					{
-					});
-				});
-			});
-</script>
+<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
+	<span id="begin"></span>
 	<div class="header-banner">
 		<div class="container">
 			<div class="home" id="homeHeader">
-					<a href="#" id=homeBtn><span class="glyphicon glyphicon-home"></span></a>
+					<a href="#begin" id=homeBtn class="scroll"><span class="glyphicon glyphicon-home"></span></a>
 			</div>
 			<div class="header-top">
 				<span class="menu"><img src="images/nav.png" alt=""/></span>
@@ -65,8 +41,7 @@
 			<div class="banner-info text-center">
 				<a href="www.solucionesclean.cl"><img src="images/logos/logo_transparente_small.png" class="img-responsive" id="logo"></a>
 			</div>
-			<span id="services"></span>
-			<div class="header-bottom-grids text-center">
+			<div class="header-bottom-grids text-center" id="services">
 				<div class="header-bottom-grid1">
 					<span class="glyphicon glyphicon-leaf"></span>
 				</div>
@@ -135,23 +110,21 @@
 				En relación a los productos utilizados en los distintos servicios, estos están autorizados y certificados por el ISP y la Autoridad Sanitaria correspondiente,
 				 asegurando de esta manera una total protección de la Salud de las personas y del Medio Ambiente.
 			</p>
+			<br><br>
 			<div class="col-md-4 item-1">
 				<img src="images/i1.jpg" alt="" />
-				<h3>Duis autem vel eum</h3>
 			</div>
 			<div class="col-md-4 item-2">
 				<img src="images/i2.jpg" alt="" />
-				<h3>Duis autem vel eum</h3>
 			</div>
-			<div class="col-md-4 item-3 text-center">
-				<h4>Claritas est etiam processus dynamicus</h4>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+			<div class="col-md-4 item-2">
+				<img src="images/i2.jpg" alt="" />
 			</div>
-			<div class="clearfix"></div>
 		</div>
 	</div>
-	<div class="customers">
+	<!-- <div class="customers" id="customers">
 		<div class="container">
+			<h1>Nuestros Clientes</h1>
 			<div class="col-md-4">
 				<img src="images/i1.jpg" alt="" />
 			</div>
@@ -160,7 +133,37 @@
 			</div>
 			<div class="col-md-4">
 			</div>
-			<div class="clearfix"></div>
+		</div>
+	</div> -->
+	<div class="news" id="customers">
+		<div class="container">
+			<div class="news-text">
+				<h3>Nuestros Clientes</h3>
+				<h4>Algunos de los Clientes que han confiado en nosotros.</h4>
+			</div>
+			<div class="news-grids">
+				<div class="col-md-2 news-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+					<a class="mask" href="single.html"><img src="images/clientes/cliente1.jpg" class="img-responsive zoom-img" alt="" /></a>
+				</div>
+				<div class="col-md-2 news-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+					<a class="mask" href="single.html"><img src="images/clientes/cliente2.jpg" class="img-responsive zoom-img" alt="" /></a>
+				</div>
+				<div class="col-md-2 news-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+					<a class="mask" href="single.html"><img src="images/clientes/cliente3.png" class="img-responsive zoom-img" alt="" /></a>
+				</div>
+				<div class="col-md-2 news-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+					<a class="mask" href="single.html"><img src="images/clientes/cliente4.jpg" class="img-responsive zoom-img" alt="" /></a>
+				</div>
+				<!-- <div class="col-md-2 news-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+					<a class="mask" href="single.html"><img src="images/clientes/cliente5.jpg" class="img-responsive zoom-img" alt="" /></a>
+				</div> -->
+				<div class="col-md-2 news-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+					<a class="mask" href="single.html"><img src="images/clientes/cliente6.png" class="img-responsive zoom-img" alt="" /></a>
+				</div>
+				<div class="col-md-2 news-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+					<a class="mask" href="single.html"><img src="images/clientes/cliente7.png" class="img-responsive zoom-img" alt="" /></a>
+				</div>
+			</div>
 		</div>
 	</div>
 			<!-- testimonials -->
@@ -186,12 +189,29 @@
 				</div>
 				<div class="col-md-6 dal">
 					<h3>Contáctanos</h3>
-					<input type="text" class="text" value="Nombre" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nombre';}">
-					<input type="text" class="text" value="Apellido" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Apellido';}">
-					<input type="text" class="text" value="Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mail';}">
-					<input type="text" class="text" value="Teléfono" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Teléfono';}">
-					<textarea onfocus="if(this.value == 'Tu Mensaje') this.value='';" onblur="if(this.value == '') this.value='Tu Mensaje';" >Tu Mensaje</textarea>
-					<input type="submit" value="ENVIAR">
+					<!-- Alertas de éxito o fallo de envío de formulario -->
+						<div class="alert alert-success" id="contactSuccess" style="display:none;">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<strong>Éxito!</strong> Tu mensaje ha sido enviado correctamente. Nuestro ejecutivos se pondran en contacto contigo.
+						</div>
+
+						<div class="alert alert-danger" id="contactError" style="display:none;">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<strong>Error!</strong> Hubo un problema al enviar tu mensaje. Intenta de nuevo porfavor.
+						</div>
+					<!-- FIN alertas -->
+					<form action="/newsite/index2.html/#" id="contactForm" method="POST">
+						<input type="text" class="text" name="nombre" value="Nombre" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nombre';}">
+						<input type="text" class="text" name="apellido" value="Apellido" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Apellido';}">
+						<input type="text" class="text" name="email" value="Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mail';}">
+						<input type="text" class="text" name="telefono" value="Teléfono" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Teléfono';}">
+						<textarea name="mensaje" onfocus="if(this.value == 'Tu Mensaje') this.value='';" onblur="if(this.value == '') this.value='Tu Mensaje';" >Tu Mensaje</textarea>
+						<input type="submit" value="ENVIAR" id="enviar">
+					</form>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -200,12 +220,12 @@
 	<div class="footer">
 		<div class="container">
 			<div class="copyright text-center">
-				<p>&copy;Soluciones Clean 2015. Todos los derechos resservados. <span class="phone"><p><a href="mail-to:carlos.ramart@gmail.com"> Carlos Ramart - Webmaster</p></a></span></a></p>
+				<p>Soluciones Clean 2015 &copy;. Todos los derechos reservados. <span class="phone"><p><a href="mail-to:carlos.ramart@gmail.com">Carlos Ramart</a> | Diseñado por: <a href="http://w3layouts.com">  W3layouts</a></p>  </span></a></p>
 			</div>
 		</div>
 	</div>
 	<!-- footer-section -->
-<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<a href="#begin" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!---->
 
 </body>
