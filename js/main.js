@@ -25,13 +25,14 @@ jQuery(document).ready(function($)
 
     $.ajax({
           type: 'POST',
-          url: 'script/contacto.php',
+          url: 'script/contact.php',
           data: formData,
           success: function(data){
            $('#contactSuccess').show();
            $('input[type="submit"]').prop('disabled', false);
            $("input").prop('disabled', false);
            $("textarea").prop('disabled', false);
+           console.log(data);
        },
           error: function(error){
           console.log(error);
