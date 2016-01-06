@@ -45,6 +45,22 @@ label{
 	-moz-background-size:cover;
 	min-height:900px;
 }
+.no-margin{
+	margin: 0;
+}
+.oculto{
+	display:none;
+}
+.footerLink{
+	display: block;
+}
+.opac{
+	opacity: 1;
+}
+.grid{
+	visibility: visible;
+	-webkit-animation-delay: 0.4s;
+}
 .about-header-banner{
 	background:url('../images/banner_new.jpg') no-repeat;
 	background-size:cover;
